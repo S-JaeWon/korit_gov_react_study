@@ -1,6 +1,6 @@
 import './App.css';
 
-import Hook03 from './ReactStudy/Hook03';
+import Hook06 from './ReactStudy/Hook06';
 
 function App() {
     const name = '철수';
@@ -16,7 +16,7 @@ function App() {
             </React04> */}
             {/* <Hook01 /> */}
             {/* <CountState /> */}
-            <Hook03 />
+            <Hook06 />
         </>
     );
 }
