@@ -1,9 +1,10 @@
-import './App.css';
-
-import Hook06 from './ReactStudy/Hook06';
+import "./App.css";
+import Emotion1 from "./Emotion/Emotion1";
+import Hook08 from "./ReactStudy/Hook08";
+import Hook09 from "./ReactStudy/Hook09";
 
 function App() {
-    const name = '철수';
+    const name = "철수";
     const age = 13;
 
     return (
@@ -16,7 +17,8 @@ function App() {
             </React04> */}
             {/* <Hook01 /> */}
             {/* <CountState /> */}
-            <Hook06 />
+            {/* <Render /> */}
+            <Hook09 />
         </>
     );
 }
