@@ -1,5 +1,3 @@
-import React from 'react';
-
 function React03({ name, age, ...other }) {
     console.log(other);
     return (
