@@ -18,24 +18,6 @@ export const searchInput = css`
     padding: 5px 0px 5px 5px;
 `;
 
-export const searchButton = css`
-    height: 38px;
-    font-size: 38px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    border: none;
-    padding: 5px 0px;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.2s ease;
-
-    &:hover {
-        background-color: #f2f2f2;
-    }
-`;
-
 export const filterContainer = css`
     padding: 10px 0px;
 `;

@@ -1,8 +1,15 @@
 /** @jsxImportSource @emotion/react */
-import { LuScanSearch } from "react-icons/lu";
 import * as s from "./styles";
 
-function Header() {
+function Header({ setSearchKeyword, filterMode, setFilterMode }) {
+    const searchInputOnChangeHandler = (e) => {
+        setSearchKeyword(e.target.value);
+    };
+
+    const filterModeOnChangeHandler = (e) => {
+        setFilterMode(e.target.id);
+    };
+
     return (
         <>
             <div css={s.container}>
@@ -10,17 +17,33 @@ function Header() {
                     css={s.searchInput}
                     type="text"
                     placeholder="검색어를 입력 해주세요"
+                    onChange={searchInputOnChangeHandler}
                 />
-                <button css={s.searchButton}>
-                    <LuScanSearch />
-                </button>
             </div>
             <div css={s.filterContainer}>
-                <input type="radio" id="all" name="fliter" />
+                <input
+                    type="radio"
+                    id="all"
+                    name="fliter"
+                    checked={filterMode === "all"}
+                    onChange={filterModeOnChangeHandler}
+                />
                 <label htmlFor="all">전체</label>
-                <input type="radio" id="complete" name="fliter" />
+                <input
+                    type="radio"
+                    id="complete"
+                    name="fliter"
+                    checked={filterMode === "complete"}
+                    onChange={filterModeOnChangeHandler}
+                />
                 <label htmlFor="complete">완료</label>
-                <input type="radio" id="incomplete" name="fliter" />
+                <input
+                    type="radio"
+                    id="incomplete"
+                    name="fliter"
+                    checked={filterMode === "incomplete"}
+                    onChange={filterModeOnChangeHandler}
+                />
                 <label htmlFor="incomplete">미완료</label>
             </div>
         </>
